@@ -13,30 +13,30 @@ app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        nombre: 'Fernando Castro',
-        titulo: 'Curso de node'
-    });
-})
+// app.get('/', (req, res) => {
+//     res.render('home', {
+//         nombre: 'Fernando Castro',
+//         titulo: 'Curso de node'
+//     });
+// })
 
-app.get('/generic', (req, res) => {
-    res.render('generic', {
-        nombre: 'Fernando Castro',
-        titulo: 'Curso de node'
-    });
-})
+// app.get('/generic', (req, res) => {
+//     res.render('generic', {
+//         nombre: 'Fernando Castro',
+//         titulo: 'Curso de node'
+//     });
+// })
 
-app.get('/elements', (req, res) => {
-    res.render('elements', {
-        nombre: 'Fernando Castro',
-        titulo: 'Curso de node'
-    });
-})
+// app.get('/elements', (req, res) => {
+//     res.render('elements', {
+//         nombre: 'Fernando Castro',
+//         titulo: 'Curso de node'
+//     });
+// })
 
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
